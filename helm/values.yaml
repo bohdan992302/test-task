@@ -1,0 +1,4 @@
+container:
+  image: bohdanchiq/test-task:latest
+
+replicaCount: 1

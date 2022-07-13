@@ -1,7 +1,6 @@
 from flask import Flask, jsonify
 from flask import make_response 
 from flask import abort
-from flask import request
 
 app = Flask(__name__) 
 
@@ -44,7 +43,6 @@ def get_task(task_id):
   ret = task[0]
   print(ret)
   return jsonify({'task': ret})
-
 
 if __name__ == '__main__': 
   app.run(host='0.0.0.0', debug=True, port=80)

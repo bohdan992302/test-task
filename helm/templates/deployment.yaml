@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+   name: {{ .Release.Name }}-web-python
+   labels: 
+     app: {{ .Release.Name }}-web-python
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      project: {{ .Release.Name }}-web-python
+  template:
+    metadata:
+      labels:
+        project: {{ .Release.Name }}-web-python
+    spec:
+      containers:
+        - name: {{ .Release.Name }}-web-python
+          image: {{ .Values.container.image }}
+          imagePullPolicy: "Always"
+          ports:
+           - containerPort: 80
