@@ -20,7 +20,15 @@ tasks = [
     'description': 'Develop Continious Delivery',
     'project': 'CD', 
     'done': True 
-  } 
+  },
+  { 
+    'id': 3, 
+    'title': 'Olya and .NET',
+    'name': 'Olya', 
+    'description': 'shykaye .NET',
+    'project': 'Neznaye yak', 
+    'done': True 
+  }
 ] 
 
 @app.errorhandler(404) 
